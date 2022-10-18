@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.jenles.Status;
+import com.jenles.utils.enums.Status;
 
 public class MySqlConnection {
 	

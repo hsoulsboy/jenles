@@ -1,12 +1,19 @@
-package com.jenles;
+package com.jenles.model;
 
-public class Task {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.jenles.utils.enums.Status;
+
+@Entity
+@Table
+public class TaskModel {
 	private String title;
 	private String description;
-	private Assignee assignee;
+	private AssigneeModel assignee;
 	private Status status = Status.Backlog;
 	
-	public Task(String title, String description, Assignee assignee) {
+	public TaskModel(String title, String description, AssigneeModel assignee) {
 		this.title = title;
 		this.description = description;
 		this.assignee = assignee;
