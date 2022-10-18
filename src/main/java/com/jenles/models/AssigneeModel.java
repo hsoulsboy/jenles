@@ -1,4 +1,4 @@
-package com.jenles.model;
+package com.jenles.models;
 
 public class AssigneeModel {
 	private String name;
