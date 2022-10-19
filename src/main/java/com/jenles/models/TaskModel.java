@@ -32,11 +32,10 @@ public class TaskModel {
 	
 	public TaskModel() {}
 	
-	public TaskModel(String title, String description, AssigneeModel assignee, Status status) {
+	public TaskModel(String title, String description, String assignee, Status status) {
 		this.title = title;
 		this.description = description;
-		this.assignee = assignee.getName();
-		this.status = status.name();
+		this.assignee = assignee;
 }
 	public String getTitle() {
 		return title;
@@ -68,5 +67,14 @@ public class TaskModel {
 	
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	@Override
+	public String toString() {
+		return "TaskModel: " +
+				this.getTitle() + " / " +
+				this.getDescription() + " / " +
+				this.getStatus() + " / " +
+				this.getAssignee();
 	}
 }
