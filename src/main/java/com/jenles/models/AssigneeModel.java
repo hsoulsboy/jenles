@@ -1,9 +1,9 @@
-package com.jenles;
+package com.jenles.models;
 
-public class Assignee {
+public class AssigneeModel {
 	private String name;
 	
-	public Assignee(String name) {
+	public AssigneeModel(String name) {
 		this.name = name;
 	}
 	
