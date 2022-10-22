@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:14.5
+    restart: always
+    environment:
+      - POSTGRES_DB=jenles
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432

@@ -1,5 +1,12 @@
 FROM ubuntu:20.04
 
+RUN apt-get update; \
+    apt-get install -y maven
+
+COPY . /jenles
+
 WORKDIR /jenles
 
-COPY . .
+RUN mvn package
+
+CMD mvn exec:java
