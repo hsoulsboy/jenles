@@ -9,3 +9,10 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
+  jenles-server:
+    image: jenles-server:1.0
+    build:
+      context: .
+      dockerfile: docker/jenles-server/Dockerfile
+    depends_on:
+      - db
